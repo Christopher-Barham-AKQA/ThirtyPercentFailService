@@ -33,7 +33,7 @@ public class ConcurrencyTest {
 
     @Before
     public void setUp() throws Exception {
-        service = new Service(new AtomicInteger(), 10);
+        service = new Service(10);
         passed = new AtomicInteger();
         failed = new AtomicInteger();
     }

@@ -19,14 +19,14 @@ public class Service {
     int threeQuartersOfLimit;
 
     public Service() {
-        this(new AtomicInteger(), DEFAULT_LIMIT);
+        this(DEFAULT_LIMIT);
     }
 
-    public Service(AtomicInteger counter, int limit) {
+    public Service(int limit) {
         super();
         this.limit = limit;
         threeQuartersOfLimit = (int) (0.75 * limit);
-        this.counter = counter;
+        counter = new AtomicInteger();
     }
 
     public boolean serviceCall() {

@@ -28,7 +28,7 @@ public class ServiceTest {
 
     @Test
     public void testFour() {
-        service = new Service(new AtomicInteger(), 3);
+        service = new Service(3);
         assertThat("first call should be true", service.serviceCall(), is(true));
         assertThat("second call should be true", service.serviceCall(), is(true));
         assertThat("third call should be false", service.serviceCall(), is(false));
@@ -41,7 +41,7 @@ public class ServiceTest {
         int passed = 0;
         int failed = 0;
 
-        service = new Service(new AtomicInteger(), limit);
+        service = new Service(limit);
         for (int i = 0; i < 2 * limit; i++) {
             if (service.serviceCall()) {
                 passed++;
