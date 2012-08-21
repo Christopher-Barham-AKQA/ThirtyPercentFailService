@@ -15,6 +15,7 @@ Unit tests show examples of how to use it.  There is also a concurrent unit test
 
 #Circuit Breaker#
 Based roughly on the following logic:
+
     When Circuit is Closed:
     on call = pass through
     call succeeds = reset count
